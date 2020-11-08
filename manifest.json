@@ -2,7 +2,7 @@
   "manifest_version": "1",
   "type": "WebApp",
   "meta": {
-    "name": "SampleApp",
+    "name": "Sample App",
     "version": "0.0.1",
     "minimum-overwolf-version": "0.120.1.0",
     "author": "Overwolf",
