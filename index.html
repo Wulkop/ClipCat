@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Overwolf Rainbow Six Siege events sample App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="button_event_handler.js"></script>
+  <script src="JSMQ.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+</head>
+<body style="background-color:rgba(255,255,255,0.0); overflow: hidden;">
+  <div id="Buttons" class="mybtn">
+    <div id="NameSelect" style="visibility:hidden">
+      <button class="button" type="button" id="Niklas" onClick="onNameButtonClick(this.id)">
+        <span>Niklas</span>
+      </button>
+      <button class="button" type="button" id="Ceddi" onClick="onNameButtonClick(this.id)">
+        <span>Ceddi</span>
+      </button>
+      <button class="button" type="button" id="Kevin" onClick="onNameButtonClick(this.id)">
+        <span>Kevin</span>
+      </button>
+      <button class="button" type="button" id="Manu" onClick="onNameButtonClick(this.id)">
+        <span>Manu</span>
+      </button>
+      <button class="button" type="button" id="Wully" onClick="onNameButtonClick(this.id)">
+        <span>Wully</span>
+      </button>
+      <button class="button" type="button" id="Ole" onClick="onNameButtonClick(this.id)">
+        <span>Ole</span>
+      </button>
+    </div>
+    <button class="button" type="button" id="Rage" onClick="onButtonClick(this.id)">
+      <span>Rage</span>
+    </button>
+    <button class="button" type="button" id="Teamkills" onClick="onButtonClick(this.id)">
+      <span>Teamkills</span>
+    </button>
+    <button class="button" type="button" id="Suspicious" onClick="onButtonClick(this.id)">
+      <span>Suspicious</span>
+    </button>
+    <button class="button" type="button" id="Lucky Shots" onClick="onButtonClick(this.id)">
+      <span>Lucky Shots</span>
+    </button>
+    <button class="button" type="button" id="Clutches" onClick="onButtonClick(this.id)">
+      <span>Clutches</span>
+    </button>
+    <button class="button" type="button" id="Troll" onClick="onButtonClick(this.id)">
+      <span>Troll</span>
+    </button>
+    <button class="button" type="button" id="Spruche" onClick="onButtonClick(this.id)">
+      <span>Geile Spr&uumlche</span>
+    </button>
+    <button class="button" type="button" id="Runden" onClick="onButtonClick(this.id)">
+      <span>Gute Runden</span>
+    </button>
+  </div>
+ 
+
+  <div id="dvDiff" style="width:100%; height:100%"></div>
+
+</body>
+</html>

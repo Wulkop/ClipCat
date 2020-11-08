@@ -1,0 +1,15 @@
+.mybtn .button {
+    background-color: orange;
+    border: 1px solid green;
+    width: 35%;
+    color: black;
+    font-size: 9px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+ }
+ .mybtn
+ {
+   visibility: hidden;
+ }
