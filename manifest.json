@@ -2,10 +2,10 @@
   "manifest_version": "1",
   "type": "WebApp",
   "meta": {
-    "name": "ClipCat",
+    "name": "SampleApp",
     "version": "0.0.1",
     "minimum-overwolf-version": "0.120.1.0",
-    "author": "Wully0x7CD",
+    "author": "Overwolf",
     "icon": "icon.png",
     "icon_gray": "icon_gray.png",
     "description": "An overwolf in-game overlay to categorize your best gaming clips directly after recording."
