@@ -8,7 +8,7 @@
     "author": "Wully0x7CD",
     "icon": "icon.png",
     "icon_gray": "icon_gray.png",
-    "description": "Game Events Consumer Sample"
+    "description": "An overwolf in-game overlay to categorize your best gaming clips directly after recording."
   },
   "permissions": [
     "Hotkeys",
