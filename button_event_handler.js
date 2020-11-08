@@ -14,43 +14,21 @@ function hideButtons()
 function onButtonClick(clicked_id)
 {
     console.log(clicked_id)
-    switch(clicked_id)
-    {
-        case "Rage":
-            $('#NameSelect').css('visibility','visible');
-            $("#NameSelect").children().show();
 
-            mode = "Rage"
-            break;
-        case "Teamkills":
-            onClipClassified("Teamkills")
-            hideButtons()
-            break;
-        case "Suspicious":
-            onClipClassified("Suspicious")
-            hideButtons()
-            break;
-        case "Lucky Shots":
-            onClipClassified("Lucky Shots")
-            hideButtons()
-            break;
-        case "Clutches":
-            onClipClassified("Clutches")
-            hideButtons()
-            break;
-        case "Troll":
-            onClipClassified("Troll")
-            hideButtons()
-            break;
-        case "Spruche":
-            onClipClassified("Spruche")
-            hideButtons()
-            break;
-        case "Runden":
-            onClipClassified("Runden")
-            hideButtons()
-            break;
+    if (clicked_id == "Rage")
+    {
+        $('#NameSelect').css('visibility','visible');
+        $("#NameSelect").children().show();
+        mode = "Rage"
+        return;
     }
+
+    if (clicked_id == "Add category")
+    {
+        return;
+    }
+    onClipClassified(clicked_id);
+    hideButtons();
 }
 function onNameButtonClick(clicked_id)
 {
