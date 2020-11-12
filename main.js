@@ -14,7 +14,9 @@ var g_interestedInFeatures = [
 ];
 //var dealer = new JSMQ.Dealer();
 var plugin = new OverwolfPlugin("simple-io-plugin", true);
-var config_path = "D:/Development/events-sample-apps-master/rainbow-six-sample-app/config.json";
+//var config_path = "D:/Development/events-sample-apps-master/rainbow-six-sample-app/config.json";
+var extension_id = "anoahjhemlbnmhkljlgbmnfflpnhgjpmfjnhdfoe"
+var config_path = Overwolf.io.paths.localAppData + "/overwolf/extensions/" + extension_id + "/0.0.1"
 var config = 
 {
   path: "D:/ShadowPlayTest/Tom Clancy's Rainbow Six  Siege"
