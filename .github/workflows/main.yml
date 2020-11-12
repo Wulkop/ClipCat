@@ -34,7 +34,7 @@ jobs:
       - name: Zip Release
         # You may pin to the exact commit or the version.
         # uses: TheDoctor0/zip-release@a1afcab9c664c9976ac398fa831eac67bed1eb0e
-        run: compress-archive . ./ClipCat.opk
+        run: compress-archive ./* ./ClipCat.opk
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.0
