@@ -16,7 +16,9 @@
     "Streaming",
     "Profile",
     "GameInfo",
-    "DesktopStreaming"
+    "DesktopStreaming",
+    "FileSystem"
+
   ],
   "data": {
     "game_targeting": {
@@ -50,6 +52,12 @@
         "default": "F1"
       }
     },
+    "extra-objects": {
+      "simple-io-plugin": {
+        "file": "simple-io-plugin.dll",
+        "class": "overwolf.plugins.simpleio.SimpleIOPlugin"
+      }
+    },
     "game_events": [10826],
     "launch_events": [
       {
@@ -61,5 +69,6 @@
         },
         "start_minimized": false
       }]
-}
+    
+  }
 }

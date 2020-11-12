@@ -1,0 +1,3 @@
+[submodule "Dependencies/overwolf-plugins"]
+	path = Dependencies/overwolf-plugins
+	url = https://github.com/Wulkop/overwolf-plugins.git
