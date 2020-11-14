@@ -36,8 +36,8 @@
         "resizable": false,
         "show_in_taskbar": true,
         "size": {
-          "width": 200,
-          "height": 500
+          "width": 1080,
+          "height": 1920
         },
         "start_position": {
           "Top": 0,

@@ -11,5 +11,28 @@
  }
  .mybtn
  {
-   visibility: hidden;
+   visibility: visible;
  }
+ #Buttons
+ {
+   margin-top: 15px;
+ }
+ .btn {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2px;
+  line-height: 1.4;
+  padding: 5px;
+  font-size: 10px;
+ }
+ .dashed {
+  border-style: dashed;
+  border-color: black;
+  background-color: transparent;
+ }
+ .sub1 {
+   margin-left: 0px;
+ }
+ .btn:hover {
+  filter: brightness(120%);
+}

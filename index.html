@@ -6,58 +6,96 @@
   <script src="JSMQ.js"></script>
   <script src="overwolfplugin.js"></script>
   <script src="main.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
 </head>
 <body style="background-color:rgba(255,255,255,0.0); overflow: hidden;">
-  <div id="Buttons" class="mybtn">
-    <div id="NameSelect" style="visibility:hidden; margin-bottom: 10px;">
-      <button class="button" type="button" id="Niklas" onClick="onNameButtonClick(this.id)">
-        <span>Niklas</span>
-      </button>
-      <button class="button" type="button" id="Ceddi" onClick="onNameButtonClick(this.id)">
-        <span>Ceddi</span>
-      </button>
-      <button class="button" type="button" id="Kevin" onClick="onNameButtonClick(this.id)">
-        <span>Kevin</span>
-      </button>
-      <button class="button" type="button" id="Manu" onClick="onNameButtonClick(this.id)">
-        <span>Manu</span>
-      </button>
-      <button class="button" type="button" id="Wully" onClick="onNameButtonClick(this.id)">
-        <span>Wully</span>
-      </button>
-      <button class="button" type="button" id="Ole" onClick="onNameButtonClick(this.id)">
-        <span>Ole</span>
-      </button>
+  <div id="Buttons" class="mybtn row">
+
+    <div class="col s1" id="LeftRow">
+      <div>
+        <button class="btn blue" type="button" id="Rage" onClick="onButtonClick(this.id)">
+          <span>Rage</span>
+        </button>
+      </div>
+  
+      <div>
+        <button class="btn blue" type="button" id="Teamkills" onClick="onButtonClick(this.id)">
+          <span>Teamkills</span>
+        </button>
+      </div>
+  
+      <div>
+        <button class="btn blue" type="button" id="Suspicious" onClick="onButtonClick(this.id)">
+          <span>Suspicious</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue" type="button" id="Lucky shots" onClick="onButtonClick(this.id)">
+          <span>Lucky shots</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue" type="button" id="Clutches" onClick="onButtonClick(this.id)">
+          <span>Clutches</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue" type="button" id="Troll" onClick="onButtonClick(this.id)">
+          <span>Troll</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue" type="button" id="Funny quotes" onClick="onButtonClick(this.id)">
+          <span>Funny quotes</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue" type="button" id="Nice rounds" onClick="onButtonClick(this.id)">
+          <span>Nice rounds</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn dashed" type="button" id="Add category" onClick="onButtonClick(this.id)">
+          <span>Add category</span>
+        </button>
+      </div>
+    </div>
+    <div class="col s1" id="MiddleRow" style="visibility:hidden; margin-bottom: 10px;">
+      <div>
+        <button class="btn sub1 blue lighten-1" type="button" id="Niklas" onClick="onNameButtonClick(this.id)">
+          <span>Niklas</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue lighten-1 sub1" type="button" id="Ceddi" onClick="onNameButtonClick(this.id)">
+          <span>Ceddi</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue lighten-1 sub1" type="button" id="Kevin" onClick="onNameButtonClick(this.id)">
+          <span>Kevin</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue lighten-1 sub1" type="button" id="Manu" onClick="onNameButtonClick(this.id)">
+          <span>Manu</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue lighten-1 sub1" type="button" id="Wully" onClick="onNameButtonClick(this.id)">
+          <span>Wully</span>
+        </button>
+      </div>
+      <div>
+        <button class="btn blue lighten-1 sub1" type="button" id="Ole" onClick="onNameButtonClick(this.id)">
+          <span>Ole</span>
+        </button>
+      </div>
     </div>
 
-    <button class="button" type="button" id="Rage" onClick="onButtonClick(this.id)">
-      <span>Rage</span>
-    </button>
-    <button class="button" type="button" id="Teamkills" onClick="onButtonClick(this.id)">
-      <span>Teamkills</span>
-    </button>
-    <button class="button" type="button" id="Suspicious" onClick="onButtonClick(this.id)">
-      <span>Suspicious</span>
-    </button>
-    <button class="button" type="button" id="Lucky shots" onClick="onButtonClick(this.id)">
-      <span>Lucky shots</span>
-    </button>
-    <button class="button" type="button" id="Clutches" onClick="onButtonClick(this.id)">
-      <span>Clutches</span>
-    </button>
-    <button class="button" type="button" id="Troll" onClick="onButtonClick(this.id)">
-      <span>Troll</span>
-    </button>
-    <button class="button" type="button" id="Funny quotes" onClick="onButtonClick(this.id)">
-      <span>Funny quotes</span>
-    </button>
-    <button class="button" type="button" id="Nice rounds" onClick="onButtonClick(this.id)">
-      <span>Nice rounds</span>
-    </button>
-    <button class="button" type="button" id="Add category" onClick="onButtonClick(this.id)">
-      <span>Add category</span>
-    </button>
+    
   </div>
  
 

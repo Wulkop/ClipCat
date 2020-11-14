@@ -184,7 +184,7 @@ function main(status)
   overwolf.settings.hotkeys.onPressed.addListener(function(info)
   {
     console.log("On Pressed");
-    showButtons()
+    showButtons();
   });
   overwolf.games.getRunningGameInfo(function (res) {
     if (gameRunning(res)) {
@@ -201,6 +201,8 @@ function main(status)
   });
 }
 plugin.initialize(main)
+console.log("Test");
+showButtons();
 
 
 

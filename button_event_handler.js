@@ -48,8 +48,8 @@ function onButtonClick(clicked_id)
 
     if (clicked_id == "Rage")
     {
-        $('#NameSelect').css('visibility','visible');
-        $("#NameSelect").children().show();
+        $('#MiddleRow').css('visibility','visible');
+        $("#MiddleRow").children().show();
         mode = "Rage"
         return;
     }
@@ -67,8 +67,8 @@ function onButtonClick(clicked_id)
 function onNameButtonClick(clicked_id)
 {
     console.log(clicked_id)
-    $('#NameSelect').css('visibility','hidden');
-    $("#NameSelect").children().hide();
+    $('#MiddleRow').css('visibility','hidden');
+    $("#MiddleRow").children().hide();
 
     setTimeout(function()
     {
