@@ -1,26 +1,4 @@
-// this a subset of the features that Tom Clancy's Rainbow Six: Siege events provides - however,
-// when writing an app that consumes events - it is best if you request
-// only those features that you want to handle.
-//
-// NOTE: in the future we'll have a wildcard option to allow retrieving all
-// features
-var g_interestedInFeatures = [
-  'game_info',
-  'match',
-  'roster',
-  'kill',
-  'death',
-  'match_info'
-];
-//var dealer = new JSMQ.Dealer();
-var plugin = new OverwolfPlugin("simple-io-plugin", true);
-//var config_path = "D:/Development/events-sample-apps-master/rainbow-six-sample-app/config.json";
-var extension_id = "anoahjhemlbnmhkljlgbmnfflpnhgjpmfjnhdfoe"
-var config_path = overwolf.io.paths.localAppData + "/overwolf/extensions/" + extension_id + "/0.0.1/config.json"
-var config = 
-{
-  path: "D:/ShadowPlayTest/Tom Clancy's Rainbow Six  Siege"
-}
+var plugin = new OverwolfPlugin(plugin_dll_filename, true);
 
 function registerEvents() {
   // general events errors
@@ -122,49 +100,10 @@ function onClipClassified(classification)
   var videoPath = config.path; // no extension filtering
   moveLatestClip(videoPath, classification)
 }
-function onConfigWriteCompleted(status)
-{
-  console.log(status);
-}
-function onConfigReadCompleted(status)
-{
-  console.log(status);
-  if(status.success)
-  {
-    config = JSON.parse(status.content)
-  }
-  else
-  {
-    console.warn("Cannot parse config content");
-    config = null;
-  }
-}
-function readConfig()
-{
-  overwolf.io.fileExists(config_path, function(status)
-  {
-    if(status.status == "error")
-    {
-      console.warn(status.found);
-    }
-    if(!status.found)
-    {
-      console.log("Config file does not exist");
-      config.path = window.prompt("Please enter the path to your video recordings", "D:/ShadowPlayTest/Tom Clancy's Rainbow Six  Siege");
-     
-      configStr = JSON.stringify(config);
-      overwolf.io.writeFileContents(config_path, configStr, "UTF8", false, onConfigWriteCompleted);
-    }
-    else if (status.status == "success" && status.found)
-    {
-      overwolf.io.readFileContents(config_path, "UTF8", onConfigReadCompleted);
-    }
-  });
-}
+
 
 function main(status)
 {
-
   if (status == false)
   {
     console.log("Plugin couldn't be loaded??");
@@ -184,7 +123,7 @@ function main(status)
   overwolf.settings.hotkeys.onPressed.addListener(function(info)
   {
     console.log("On Pressed");
-    showButtons();
+    showAllButtons();
   });
   overwolf.games.getRunningGameInfo(function (res) {
     if (gameRunning(res)) {
@@ -201,8 +140,7 @@ function main(status)
   });
 }
 plugin.initialize(main)
-console.log("Test");
-showButtons();
+showAllButtons();
 
 
 
