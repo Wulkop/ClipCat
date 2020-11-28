@@ -1,6 +1,6 @@
 function getHTMLForButton(categoryName, categoryId, level)
 {
-    return "<div><button class=\"" + btnClasses[level] + "\" type=\"button\" id=\"" + categoryId + "\" onClick=\"onButtonClick(this.id)\"><span>" + categoryName + "</span></button></div>"
+    return "<div><button class=\"" + btnClasses[level] + "\" type=\"button\" id=\"" + categoryId + "\" <span>" + categoryName + "</span></button></div>"
 }
 function showAllButtons()
 {

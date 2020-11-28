@@ -1,13 +1,5 @@
 var config_path = overwolf.io.paths.localAppData + "/overwolf/extensions/" + extension_id + "/0.0.1/config.json"
 
-class Category
-{
-    constructor(name, categoryCollection, level)
-    {
-        this.name = name;
-        this.categoryCollection = categoryCollection;
-    }
-}
 var RageCat = new Category("Rage", null);
 var TeamkillsCat = new Category("Teamkill", null);
 var SuspiciousCat = new Category("Suspicious", null);
@@ -47,6 +39,7 @@ CatC.categoryCollection = [SubCA, SubCB];
 
 var rootCategoryCollection = [RageCat, TeamkillsCat, SuspiciousCat, LuckyShotsCat, ClutchesCat, TrollCat, FunnyQuotesCat, NiceRoundsCat];
 
+
 console.log(rootCategoryCollection);
 
 var config = 
@@ -65,7 +58,8 @@ function setupCategories()
     console.log(config);
     config.categories.forEach(function(category, index)
         {
-            processCategory(category, index, level, category.name);
+          Object.setPrototypeOf(category, Category.prototype);
+          processCategory(category, index, level, category.name);
         });
 }
 function processCategory(category, index, level, fullCatName)
@@ -75,6 +69,7 @@ function processCategory(category, index, level, fullCatName)
   {
     var buttonHTML = getHTMLForButton(category.name, fullCatName, level);
     $("#"+divIds[level]).append(buttonHTML);
+    category.setupHTML(fullCatName);
   }
   category.level = level;
   CategoryDict[fullCatName] = category;
@@ -124,4 +119,36 @@ function readConfig()
       overwolf.io.readFileContents(config_path, "UTF8", onConfigReadCompleted);
     }
   });
+}
+
+function onAddButtonClicked(parentId)
+{
+    console.log(parentId);
+
+    var catName = window.prompt("Add category name", "Category name");
+    var newCat = new Category(catName, null);
+
+    if(activeCategory == null || parentId == "LeftRow")
+    {
+      var buttonHTML = getHTMLForButton(catName, catName, 0);
+      $("#"+divIds[0]).append(buttonHTML);
+      newCat.level = 0;
+      newCat.setupHTML(catName);
+      config.categories.push(newCat);
+    }
+    else
+    {
+      var level = activeCategory.level + 1;
+      var buttonHTML = getHTMLForButton(catName, activeCategory.btn.id + "_" + catName, level);
+      $("#"+divIds[level]).append(buttonHTML);
+      newCat.level = level;
+      newCat.setupHTML(activeCategory.btn.id + "_" + catName);
+
+      if(activeCategory.categoryCollection == null)
+      {
+        activeCategory.categoryCollection = [];
+      }
+      activeCategory.categoryCollection.push(newCat);
+      config.categories.push(newCat);
+    }
 }

@@ -8,6 +8,8 @@
     text-align: center;
     text-decoration: none;
     display: block;
+
+    
  }
  .mybtn
  {
@@ -24,6 +26,9 @@
   line-height: 1.4;
   padding: 5px;
   font-size: 10px;
+
+  animation: wiggleEffect 0.2s infinite;
+  animation-play-state: paused;
  }
  .dashed {
   border-style: dashed;
@@ -35,4 +40,14 @@
  }
  .btn:hover {
   filter: brightness(120%);
+}
+
+
+@keyframes wiggleEffect
+{
+  0%{transform: rotate(0deg)}
+  25%{transform: rotate(3.5deg)}
+  50%{transform: rotate(0deg)}
+  75%{transform: rotate(-3.5deg)}
+  100%{transform: rotate(0deg)}
 }
